@@ -40,9 +40,9 @@ public class Main {
 			choice = false;
 		}
 
-		CreerPerso(namePlayer);
+		//CreerPerso(namePlayer);
 
-		System.out.println("C’est donc vous le grand "+ + player.getNom() +" ?");
+		//System.out.println("C’est donc vous le grand "+ + player.getNom() +" ?");
 
 		/*
 		 * Vous êtes l’élu de la tribu des Y’oudevh, choisit parmi l’élite pour vaincre

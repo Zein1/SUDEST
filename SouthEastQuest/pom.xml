@@ -1,7 +1,107 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.sudest.app</groupId>
-  <artifactId>SouthEastQuest</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>SouthEastQuest</name>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+<modelVersion>4.0.0</modelVersion>
+<groupId>com.sudest.app</groupId>
+<version>1.0</version>
+<artifactId>SouthEastQuest</artifactId>
+
+<properties>
+  <!-- Maven Properties -->
+  <maven.compiler.source>1.8</maven.compiler.source>
+  <maven.compiler.target>1.8</maven.compiler.target>
+  <!-- Dependencies versions -->
+  <logbackVersion>1.2.3</logbackVersion>
+  <shadePluginVersion>3.2.1</shadePluginVersion>
+  <!-- Jacoco Plugin -->
+  <jacocoPluginVersion>0.8.4</jacocoPluginVersion>
+  <!-- JUnit -->
+  <junitVersion>5.5.0</junitVersion>
+  <!-- Surefire -->
+  <mavenTestPluginsVersion>2.22.0</mavenTestPluginsVersion>
+</properties>
+
+<dependencies>
+  <dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>${logbackVersion}</version>
+  </dependency>
+  <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>${junitVersion}</version>
+    <scope>test</scope>
+  </dependency>
+
+  <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>${junitVersion}</version>
+    <scope>test</scope>
+  </dependency>
+</dependencies>
+
+<build>
+  <finalName>MavenShadeExample-uber</finalName>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-shade-plugin</artifactId>
+      <version>${shadePluginVersion}</version>
+      <executions>
+        <execution>
+          <phase>package</phase>
+          <goals>
+            <goal>shade</goal>
+          </goals>
+          <configuration>
+            <transformers>
+              <transformer
+                      implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                <manifestEntries>
+                  <Main-Class>main.java.services</Main-Class>
+                  <Build-Number>1.0</Build-Number>
+                </manifestEntries>
+              </transformer>
+            </transformers>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+
+    <plugin>
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+      <version>${jacocoPluginVersion}</version>
+      <executions>
+        <execution>
+          <id>prepare-agent</id>
+          <goals>
+            <goal>prepare-agent</goal>
+          </goals>
+        </execution>
+        <execution>
+          <id>report</id>
+          <phase>test</phase>
+          <goals>
+            <goal>report</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>${mavenTestPluginsVersion}</version>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-failsafe-plugin</artifactId>
+      <version>${mavenTestPluginsVersion}</version>
+    </plugin>
+  </plugins>
+
+</build>
+
 </project>

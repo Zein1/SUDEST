@@ -23,7 +23,7 @@ public class ProjectOwner extends Humain{
 		return true;
 	}
 	
-	public boolean spell()
+	public boolean spell(int nbTours)
 	{
 		return appelSousFiffre();
 	}

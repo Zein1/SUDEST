@@ -17,6 +17,7 @@ public class Combat {
     }
 
     public void Fight(){
+        System.out.println("Appuyez sur entré pour débuter le combat");
         int nbrTour = 0;
         while(humain.getHp() != 0){
             while(monstre.getHp() != 0){
@@ -30,16 +31,17 @@ public class Combat {
                         monstre.calculDegats(humain.getAtk());
                         System.out.println("Vous avez infligé " + humain.getAtk() + " de dégâts");
                         System.out.println("Le monstre a "+monstre.getHp()+" points de vie");
+                        System.out.println("C'est au tour de " + monstre.getNom());
                     }
                     else if (choixAttaque.equals("2"))
                     {
                         humain.spell(nbrTour);
+                        System.out.println("C'est au tour de " + monstre.getNom());
                     }
                     else if (choixAttaque.equals("1") && choixAttaque.equals("2"))
                     {
                         System.out.println("Veuillez choisir une attaque ci dessous ");
                     }
-                    System.out.println("C'est au tour de " + monstre.getNom());
                     nbrTour++;
                 }
 

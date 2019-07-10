@@ -21,7 +21,11 @@ public class DevOps extends Humain{
 		{
 			if (i > 90)
 			{
+<<<<<<< HEAD
 				hp = hp - 5;
+=======
+				hp = hp - 10;
+>>>>>>> dc7fa4408cfc09395aec834f6b2fec83267d73a2
 			}
 		}
 		

@@ -4,7 +4,7 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("bonjour");
 
-		çç/*
+		/*
 		 * Vous êtes l’élu de la tribu des Y’oudevh, choisit parmi l’élite pour vaincre
 		 * l’héritier du mal : le grand Mah’ven. Quel est votre nom, vaillant héros ?
 		 * Rentrer nom* Très bien, *nom* ! Veuillez à présent choisir votre spécialité :

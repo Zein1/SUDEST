@@ -23,7 +23,7 @@ public class Combat {
 
                 if(nbrTour %2 == 0) {
                     System.out.println("C'est votre tour ! Veullez choisir une attaque : \r\n");
-                    System.out.println();
+                    System.out.println(1+" - Attaque de base             "+2+" - Spécialisation");
 
                     if (sn.nextLine() == "1") {
                         humain.calculDegats(humain.getAtk());

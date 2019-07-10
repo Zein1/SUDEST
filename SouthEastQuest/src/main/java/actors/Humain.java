@@ -12,5 +12,8 @@ public class Humain extends EtreVivant{
 		
 	}
 	
-
+	public void levelUP()
+	{
+		level = level + 1;
+	}
 }

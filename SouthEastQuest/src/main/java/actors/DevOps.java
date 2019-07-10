@@ -6,4 +6,5 @@ public class DevOps extends Humain{
 		super(1, 120, 6, nom);
 	}
 
+	
 }

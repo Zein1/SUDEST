@@ -26,8 +26,8 @@ public class Competence {
 		touche = cTouche;
 	}
 
-	public int autreEffet(Humain humain, Monstre monstre, Competence competence) {
-		System.out.println(monstre.nom + " reçoit " + competence.puissance + " dégât(s) !");
-		return (0);
-	}
+//	public int autreEffet(Humain humain, Monstre monstre, Competence competence) {
+//		System.out.println(monstre.nom + " reçoit " + competence.puissance + " dégât(s) !");
+//		return (0);
+//	}
 }

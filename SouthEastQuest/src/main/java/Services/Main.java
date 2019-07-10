@@ -1,8 +1,43 @@
 package Services;
+import actors.DevOps;
+import actors.Humain;
+import actors.ProjectOwner;
+import actors.ScrumMaster;
+import java.util.Scanner;
 
 public class Main {
+
 	public static void main(String[] args) {
 		System.out.println("bonjour");
+
+		Scanner userInput = new Scanner(System.in);
+		Boolean choice = false;
+
+		System.out.println("Vous êtes l’élu de la tribu des Y’oudevh, choisit parmi l’élite pour vaincre\n" +
+				"l’héritier du mal : le grand Mah’ven. Quel est votre nom, vaillant héros ?");
+		String namePlayer = userInput.nextLine();
+
+		System.out.println("Très bien, "+ namePlayer +" ! Veuillez à présent choisir votre spécialité : (DevOps/ProjectOwner/ScrumMaster)");
+		String classPlayer = userInput.nextLine();
+
+		if (classPlayer.equals("DevOps")) {
+			DevOps player = new DevOps(namePlayer);
+			choice = true;
+		} else if (classPlayer.equals("ProjectOwner")) {
+			ProjectOwner player = new ProjectOwner(namePlayer);
+			choice = true;
+		} else if (classPlayer.equals("ScrumMaster")) {
+			ScrumMaster player = new ScrumMaster(namePlayer);
+			choice = true;
+		} else {
+			System.out.println("Veuillez à présent choisir votre spécialité : (DevOps/ProjectOwner/ScrumMaster)");
+			classPlayer = userInput.nextLine();
+			choice = false;
+		}
+
+		CreerPerso(namePlayer);
+
+		System.out.println("C’est donc vous le grand "+ + player.getNom() +" ?");
 
 		/*
 		 * Vous êtes l’élu de la tribu des Y’oudevh, choisit parmi l’élite pour vaincre

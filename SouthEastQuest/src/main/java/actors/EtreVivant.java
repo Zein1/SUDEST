@@ -40,4 +40,8 @@ public abstract class EtreVivant {
 		return hp;
 	}
 
+	public String getNom()
+	{
+		return nom;
+	}
 }

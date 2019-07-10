@@ -29,5 +29,15 @@ public abstract class EtreVivant {
 
 
 	}
+	
+	public int getAtk()
+	{
+		return atk;
+	}
+	
+	public int getHp()
+	{
+		return hp;
+	}
 
 }

@@ -13,4 +13,6 @@ public abstract class Humain extends EtreVivant{
 	
 	public abstract boolean spell(int nbTours);
 	
+	
+	
 }

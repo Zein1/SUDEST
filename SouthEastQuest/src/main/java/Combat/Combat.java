@@ -16,8 +16,8 @@ public class Combat {
     }
 
     public void Fight(){
-        while(humain.calculDegats(0)){
-            while(monstre.calculDegats(0)){
+        while(humain.getHp() != 0){
+            while(monstre.getHp() != 0){
 
                 int nbrTour = 0;
 
@@ -48,9 +48,25 @@ public class Combat {
                     nbrTour++;
                 }
             }
-
         }
+        FinDeTour();
     }
+
+    public boolean FinDeTour()
+    {
+        if(humain.getHp() == 0)
+        {
+            System.out.println("Vous avez perdu le combat ! Vous êtes nul...");
+            return false;
+        }
+        if(monstre.getHp() == 0)
+        {
+            System.out.println("Bravo ! Vous avez terrassé votre ennemi !");
+            humain.levelUP();
+        }
+        return true;
+    }
+
 }
 
 

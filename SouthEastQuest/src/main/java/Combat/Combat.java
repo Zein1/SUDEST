@@ -9,6 +9,7 @@ public class Combat {
     Monstre monstre;
     Humain  humain;
     public static Scanner sn = new Scanner(System.in);
+    public static String choixAttaque = sn.nextLine();
 
     public Combat(Monstre monstre, Humain humain){
         this.humain = humain;
@@ -25,11 +26,11 @@ public class Combat {
                     System.out.println("C'est votre tour ! Veullez choisir une attaque : \r\n");
                     System.out.println(1+" - Attaque de base             "+2+" - Spécialisation");
 
-                    if (sn.nextLine() == "1") {
+                    if (choixAttaque == "1") {
                         humain.calculDegats(humain.getAtk());
                         System.out.println("Vous avez infligé " + humain.getAtk() + " de dégâts");
                     }
-                    else if (sn.nextLine() == "2")
+                    else if (choixAttaque == "2")
                     {
                         humain.spell(nbrTour);
                     }

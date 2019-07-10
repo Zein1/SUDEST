@@ -66,10 +66,4 @@ public class Combat {
         }
         return true;
     }
-
 }
-
-
-
-
-

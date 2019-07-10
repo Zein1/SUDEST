@@ -27,15 +27,15 @@ public class Combat {
                     System.out.println(1+" - Attaque de base             "+2+" - Spécialisation");
 
                     String choixAttaque = sn.nextLine();
-                    if (choixAttaque == "1") {
+                    if (choixAttaque.equals("1")) {
                         humain.calculDegats(humain.getAtk());
                         System.out.println("Vous avez infligé " + humain.getAtk() + " de dégâts");
                     }
-                    else if (choixAttaque == "2")
+                    else if (choixAttaque.equals("2"))
                     {
                         humain.spell(nbrTour);
                     }
-                    else if (choixAttaque != "1" && choixAttaque != "2")
+                    else if (choixAttaque.equals("1") && choixAttaque.equals("2"))
                     {
                         System.out.println("Veuillez choisir une attaque ");
                     }

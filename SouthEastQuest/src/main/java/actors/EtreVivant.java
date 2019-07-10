@@ -3,16 +3,13 @@ package actors;
 public abstract class EtreVivant {
 	int level;
 	int hp;
-	int atk;
-	int def;
-	String nom;
+	int atk;	String nom;
 
 
-	public EtreVivant(int level, int hp, int atk, int def, String nom) {
+	public EtreVivant(int level, int hp, int atk, String nom) {
 		this.level = level;
 		this.hp = hp;
 		this.atk = atk;
-		this.def = def;
 		this.nom = nom;
 	}
 

@@ -3,7 +3,7 @@ package actors;
 public class ProjectOwner extends Humain{
 
 	public ProjectOwner(String nom) {
-		super(1, 100, 7, 7);
+		super(1, 80, 13);
 		this.nom = nom;
 	}
 

@@ -19,7 +19,6 @@ public abstract class EtreVivant {
 	 */
 	public boolean calculDegats(int degats)
 	{
-		degats = degats - def;
 		hp = hp-degats;
 		if (hp < 0)
 		{

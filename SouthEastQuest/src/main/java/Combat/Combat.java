@@ -27,11 +27,11 @@ public class Combat {
 
                     if (sn.nextLine() == "1") {
                         humain.calculDegats(humain.atk);
-                        System.out.println("Vous avez infligez " + humain.atk + " de dégâts");
+                        System.out.println("Vous avez infligé " + humain.atk + " de dégâts");
                     }
                     else if (sn.nextLine() == "2")
                     {
-
+                        humain.spell(nbrTour);
                     }
                     else if (sn.nextLine() != "1" && sn.nextLine() != "2")
                     {

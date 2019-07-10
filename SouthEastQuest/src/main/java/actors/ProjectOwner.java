@@ -10,9 +10,9 @@ public class ProjectOwner extends Humain{
 
 	private boolean appelSousFiffre()
 	{
-		if (nbUtilisationSpell == 0)
+		if (nbUtilisationSpell != 0)
 		{
-			atk = atk + atk;
+			atk = atk + 40;
 			nbUtilisationSpell = nbUtilisationSpell - 1;
 		}
 		else
@@ -23,9 +23,9 @@ public class ProjectOwner extends Humain{
 		return true;
 	}
 	
-	public void spell()
+	public boolean spell()
 	{
-		appelSousFiffre();
+		return appelSousFiffre();
 	}
 	
 	public void reset()

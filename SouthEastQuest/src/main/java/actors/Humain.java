@@ -1,11 +1,6 @@
 package actors;
 
-
-import java.util.List;
-
-import competences.Competence;
-
-public class Humain extends EtreVivant{
+public abstract class Humain extends EtreVivant{
 
 	public Humain(int level, int hp, int atk, String nom) {
 		super(level, hp, atk, nom);
@@ -16,4 +11,7 @@ public class Humain extends EtreVivant{
 	{
 		level = level + 1;
 	}
+	
+	public abstract boolean spell();
+	
 }

@@ -34,7 +34,7 @@ public class Combat {
                     {
                         humain.spell(nbrTour);
                     }
-                    else if (sn.nextLine() != "1" && sn.nextLine() != "2")
+                    else if (choixAttaque != "1" && choixAttaque != "2")
                     {
                         System.out.println("Veuillez choisir une attaque ");
                     }

@@ -15,7 +15,7 @@ public class Combat {
         this.monstre = monstre;
     }
 
-    public void Fight(Humain humain, Monstre monstre){
+    public void Fight(){
         while(humain.calculDegats(0)){
             while(monstre.calculDegats(0)){
 
@@ -26,8 +26,8 @@ public class Combat {
                     System.out.println();
 
                     if (sn.nextLine() == "1") {
-                        humain.calculDegats(humain.atk);
-                        System.out.println("Vous avez infligé " + humain.atk + " de dégâts");
+                        humain.calculDegats(humain.getAtk());
+                        System.out.println("Vous avez infligé " + humain.getAtk() + " de dégâts");
                     }
                     else if (sn.nextLine() == "2")
                     {
@@ -37,14 +37,14 @@ public class Combat {
                     {
                         System.out.println("Veuillez choisir une attaque ");
                     }
-                    System.out.println("C'est au tour de " + monstre.nom);
+                    System.out.println("C'est au tour de " + monstre.getNom());
                     nbrTour++;
                 }
                 else if(nbrTour %2 == 1)
                 {
-                    monstre.calculDegats(monstre.atk);
-                    System.out.println("Attention ! le monstre vous a infligé "+monstre.atk " de dégâts.");
-                    System.out.println("Il vous reste " + humain.hp + " points de vie");
+                    monstre.calculDegats(monstre.getAtk());
+                    System.out.println("Attention ! le monstre vous a infligé "+monstre.getAtk() +" de dégâts.");
+                    System.out.println("Il vous reste " + humain.getHp() + " points de vie");
                     nbrTour++;
                 }
             }

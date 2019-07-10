@@ -5,8 +5,8 @@ abstract class EtreVivant {
 	int hp;
 	int atk;
 	int def;
-	
-	
+
+
 	public EtreVivant(int level, int hp, int atk, int def) {
 		this.level = level;
 		this.hp = hp;
@@ -14,8 +14,8 @@ abstract class EtreVivant {
 		this.def = def;
 	}
 
-	
-	/* Inflige 'degats' aux hp 
+
+	/* Inflige 'degats' aux hp
 	 * Renvoie TRUE si encore vivant, renvoie FALSE si mort
 	 */
 	public boolean calculDegats(int degats)
@@ -26,10 +26,10 @@ abstract class EtreVivant {
 		{
 			return false;
 		}
-		
+
 		return true;
-		
-		
+
+
 	}
-	
+
 }

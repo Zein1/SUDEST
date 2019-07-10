@@ -26,6 +26,7 @@ public class Combat {
                     System.out.println("C'est votre tour ! Veullez choisir une attaque : \r\n");
                     System.out.println(1+" - Attaque de base             "+2+" - Spécialisation");
 
+                    String choixAttaque = sn.nextLine();
                     if (choixAttaque == "1") {
                         humain.calculDegats(humain.getAtk());
                         System.out.println("Vous avez infligé " + humain.getAtk() + " de dégâts");

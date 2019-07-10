@@ -1,10 +1,10 @@
 package actors;
 
-public class DevOps extends EtreVivant{
+public class DevOps extends Humain{
 
-	public DevOps(int level, int hp, int atk, int def) {
-		super(level, hp, atk, def);
-		// TODO Auto-generated constructor stub
+	public DevOps(String nom) {
+		super(1, 100, 10, 5);
+		this.nom = nom;
 	}
 
 }

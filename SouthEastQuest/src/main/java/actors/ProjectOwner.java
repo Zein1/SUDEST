@@ -2,9 +2,9 @@ package actors;
 
 public class ProjectOwner extends Humain{
 
-	public ProjectOwner(int level, int hp, int atk, int def) {
-		super(level, hp, atk, def);
-		// TODO Auto-generated constructor stub
+	public ProjectOwner(String nom) {
+		super(1, 100, 7, 7);
+		this.nom = nom;
 	}
 
 }

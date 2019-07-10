@@ -1,7 +1,7 @@
 package competences;
 
-import actors.Humain;
-import actors.Monstre;
+import actors.EtreVivant;
+
 
 public class Competence {
 	String nom;

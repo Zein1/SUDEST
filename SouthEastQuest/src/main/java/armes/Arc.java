@@ -1,6 +1,6 @@
 package armes;
 
-public class Arc {
+public class Arc extends Arme{
     private int nbFlecheMax;
     private int nbFlecheAct;
 }

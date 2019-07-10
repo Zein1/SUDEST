@@ -1,4 +1,8 @@
 package actors;
 
-public class Archer {
+import armes.Arc;
+
+public class Archer extends Humain{
+	
+	public Arc arme;
 }

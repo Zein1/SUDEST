@@ -1,6 +1,6 @@
 package actors;
 
-abstract class EtreVivant {
+public abstract class EtreVivant {
 	int level;
 	int hp;
 	int atk;

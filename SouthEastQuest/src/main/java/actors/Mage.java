@@ -1,5 +1,9 @@
 package actors;
 
-public class Mage {
+import armes.Baton;
+
+public class Mage extends Humain{
+	
+	private Baton arme;
 
 }

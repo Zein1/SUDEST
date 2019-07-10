@@ -1,4 +1,4 @@
 package armes;
 
-public class Baton {
+public class Baton extends Arme{
 }

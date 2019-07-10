@@ -1,5 +1,10 @@
 package actors;
 
-public class Guerrier {
+import armes.Epee;
+
+public class Guerrier extends Humain{
+	
+	private Epee arme;
+	
 
 }

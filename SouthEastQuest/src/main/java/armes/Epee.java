@@ -1,4 +1,4 @@
 package armes;
 
-public class Epee {
+public class Epee extends Arme{
 }

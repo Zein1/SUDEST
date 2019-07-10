@@ -17,10 +17,9 @@ public class Combat {
     }
 
     public void Fight(){
+        int nbrTour = 0;
         while(humain.getHp() != 0){
             while(monstre.getHp() != 0){
-
-                int nbrTour = 0;
 
                 if(nbrTour %2 == 0) {
                     System.out.println("C'est votre tour ! Veullez choisir une attaque : \r\n");

@@ -27,9 +27,9 @@ public class Combat {
 
                     String choixAttaque = sn.nextLine();
                     if (choixAttaque.equals("1")) {
-                        humain.calculDegats(humain.getAtk());
+                        monstre.calculDegats(humain.getAtk());
                         System.out.println("Vous avez infligé " + humain.getAtk() + " de dégâts");
-                        System.out.println("Le monstre a "+monstre.getHp());
+                        System.out.println("Le monstre a "+monstre.getHp()+" points de vie");
                     }
                     else if (choixAttaque.equals("2"))
                     {
@@ -45,7 +45,7 @@ public class Combat {
 
                 else if(nbrTour %2 == 1)
                 {
-                    monstre.calculDegats(monstre.getAtk());
+                    humain.calculDegats(monstre.getAtk());
                     System.out.println("Attention ! le monstre vous a infligé "+monstre.getAtk() +" de dégâts.");
                     System.out.println("Il vous reste " + humain.getHp() + " points de vie");
                     nbrTour++;

@@ -3,7 +3,8 @@ package actors;
 public abstract class EtreVivant {
 	int level;
 	int hp;
-	int atk;	String nom;
+	int atk;
+	String nom;
 
 
 	public EtreVivant(int level, int hp, int atk, String nom) {
@@ -29,5 +30,19 @@ public abstract class EtreVivant {
 
 
 	}
+	
+	public int getAtk()
+	{
+		return atk;
+	}
+	
+	public int getHp()
+	{
+		return hp;
+	}
 
+	public String getNom()
+	{
+		return nom;
+	}
 }

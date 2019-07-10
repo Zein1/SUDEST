@@ -9,7 +9,6 @@ public class Humain extends EtreVivant{
 
 	public Humain(int level, int hp, int atk, String nom) {
 		super(level, hp, atk, nom);
-		
 	}
 	
 

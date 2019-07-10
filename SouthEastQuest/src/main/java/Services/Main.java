@@ -31,7 +31,7 @@ public class Main {
 		 * Mah’ven est vaincu ! Grâce à vous, la paix retourne sur les terres des
 		 * Y’oudevh. Vos exploits seront célébrés jusqu’à la fin des temps.
 		 */
-		Monstre monstre = new Monstre(1,5,5,"Monstre");
+		Monstre monstre = new Monstre(1,20,5,"Monstre");
 		ScrumMaster scrum = new ScrumMaster("héros");
 		Combat combat = new Combat(monstre, scrum);
 		combat.Fight();

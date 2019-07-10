@@ -30,6 +30,7 @@ public class Combat {
                     if (choixAttaque.equals("1")) {
                         humain.calculDegats(humain.getAtk());
                         System.out.println("Vous avez infligé " + humain.getAtk() + " de dégâts");
+                        System.out.println("Le monstre a "+monstre.getHp());
                     }
                     else if (choixAttaque.equals("2"))
                     {
@@ -37,11 +38,12 @@ public class Combat {
                     }
                     else if (choixAttaque.equals("1") && choixAttaque.equals("2"))
                     {
-                        System.out.println("Veuillez choisir une attaque ");
+                        System.out.println("Veuillez choisir une attaque ci dessous ");
                     }
                     System.out.println("C'est au tour de " + monstre.getNom());
                     nbrTour++;
                 }
+
                 else if(nbrTour %2 == 1)
                 {
                     monstre.calculDegats(monstre.getAtk());
